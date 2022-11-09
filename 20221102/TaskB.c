@@ -1,18 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+
 int main()
 {
-    int array[10];
-    int val = 0;
-    int MAX = 10;
-
-    while(val < MAX)
+    int numMax = 10;
+    for(int val = 1; val <= numMax; val++)
     {
-        int num = rand() % 10;
-        array[val] = num;
-        printf("%d\n",array[val]);
-        val++;
+        printf("%d\n", val);
     }
-    return 0;
 
+    return 0;
 }

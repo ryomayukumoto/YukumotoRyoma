@@ -1,25 +1,18 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
-    int val = 1;
-    int MAX = 100;
+    int array[10];
+    int val = 0;
+    int MAX = 10;
 
-    while(val <= MAX)
+    while(val < MAX)
     {
-        if(val % 15 == 0)
-        {
-            printf("FIZZBUZZ\n");
-        }
-        else if(val % 3 == 0)
-        {
-            printf("FIZZ\n");
-        }
-        else if(val % 5 == 0)
-        {
-            printf("BUZZ\n");
-        }
+        int num = rand() % 10;
+        array[val] = num;
+        printf("%d\n",array[val]);
         val++;
     }
     return 0;
+
 }
