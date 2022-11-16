@@ -5,13 +5,14 @@
 #define SUCCESS     1   // 成功したとき
 #define FAILURE     0   // 失敗したとき
 
-typedef int data_t;   // スタックの中身のデータ型
+//typedef int data_t;   // スタックの中身のデータ型
 
-data_t stack_data[STACK_SIZE];  // スタック
+int stack_data[STACK_SIZE];  // スタック
 int stack_num;      // スタック内のデータの数
 
 int main()
 {
+    stackPrint();
     int p;
     int element;
     stack_num = 0;
@@ -34,7 +35,7 @@ int main()
     return 0;
 }
 
-int Push(data_t push_data)
+int Push(int push_data)
 {
     if(stack_num < STACK_SIZE)
     {
@@ -46,7 +47,7 @@ int Push(data_t push_data)
         return FAILURE;
 }
 
-int Pop(data_t *pop_data)
+int Pop(int *pop_data)
 {
     if(stack_num > 0)
     {
